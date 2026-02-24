@@ -1,0 +1,18 @@
+{
+  "name": "micro-frontends-project",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently \"pnpm --filter shell dev\" \"pnpm --filter catalog dev\" \"pnpm --filter cart dev\"",
+    "build": "pnpm -r build",
+    "test": "pnpm -r test",
+    "lint": "pnpm -r lint",
+    "type-check": "pnpm -r type-check"
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.1"
+  },
+  "dependencies": {
+    "@module-federation/dts-plugin": "^2.0.1",
+    "@types/node": "^25.3.0"
+  }
+}
